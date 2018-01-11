@@ -1,7 +1,18 @@
 #pragma once
 #ifndef SHA256_H
 #define SHA256_H
+#define SHA256_VERSION 1.1
+#define SHA256_VERSION_STR "1.1"
+
+#ifdef SHA256_EXPORTS
+	#define SHA256_INTERFACE __declspec(dllexport)
+#else
+	#define SHA256_INTERFACE __declspec(dllimport)
+#endif
+
 #include <string>
+// interface du sha256
+//SHA256_INTERFACE std::string sha256(std::string input);
 
 class SHA256
 {

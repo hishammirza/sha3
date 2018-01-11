@@ -7,7 +7,7 @@
 * but not liability.
 */
 #include "sha3.h"
-
+#include "resource.h"
 
 #include <cstdint>
 #include <cstdio>
@@ -186,4 +186,9 @@ std::string sha3_256(std::string input) {
 	}	
 	return std::string(outputHex,64);
 
+}
+
+char * getSHA3Version()
+{
+	return "SHA3 version " SHA3_VERSION_STR;
 }

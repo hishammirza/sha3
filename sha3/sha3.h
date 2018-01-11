@@ -2,9 +2,22 @@
 #ifndef SHA3_H
 #define SHA3_H
 
+#define SHA3_VERSION 1.1
+#define SHA3_VERSION_STR "1.1"
+
 #define HASH_ERR_BAD_PARAMETER 1
 #define HASH_SUCCESS 0
 
+#ifdef SHA3_EXPORTS
+	#define SHA3_INTERFACE __declspec(dllexport)
+#else
+	#define SHA3_INTERFACE __declspec(dllimport)
+#endif
+
+#include <string>
+
+// interface du sha3
+//SHA3_INTERFACE int sha3(int p1, int p2);
 
 #include <cstdint>
 #include <cstdlib>
